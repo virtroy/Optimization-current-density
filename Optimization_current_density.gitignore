@@ -15,6 +15,7 @@ src.Sonar/
 *.bak
 *.tlb
 *.idl
+*.exe
 *.dll
 *.obj
 *.lastbuildstate
