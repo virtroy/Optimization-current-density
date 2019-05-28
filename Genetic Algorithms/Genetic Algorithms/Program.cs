@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using TestStack.White;
+using TestStack.White.WindowsAPI;
 
 namespace Genetic_Algorithms
 {
@@ -13,9 +15,13 @@ namespace Genetic_Algorithms
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            System.Windows.Forms.Application.EnableVisualStyles();
+            System.Windows.Forms.Application.SetCompatibleTextRenderingDefault(false);
+            System.Windows.Forms.Application.Run(new Form1());
+
+            TestStack.White.Application appka = TestStack.White.Application.Attach("Genetic Algorithms");
+            TestStack.White.UIItems.WindowItems.Window TEST = appka.GetWindow("Okno główne");
+
         }
     }
 }
